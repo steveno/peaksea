@@ -276,7 +276,7 @@ elseif &background=='dark'
   " NOTE THIS IS IN THE COOL SECTION
   " hi CursorIM		guifg=#000000	guibg=#f000f0	gui=NONE
   hi StatusLine		guifg=#000000	guibg=#a6caf0	gui=NONE
-  hi LineNr		guifg=#b0b0b0	guibg=NONE	gui=NONE
+  hi LineNr		guifg=#b0b0b0	guibg=#333435	gui=NONE
   hi Question		guifg=#000000	guibg=#d0d090	gui=NONE
   hi ModeMsg		guifg=fg	guibg=#000080	gui=NONE
   hi VisualNOS		guifg=fg	guibg=#000080	gui=NONE
