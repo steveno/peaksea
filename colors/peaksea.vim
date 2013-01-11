@@ -1,8 +1,7 @@
 " Vim color file --- psc (peak sea color) "Lite version"
-" Maintainer:	Pan, Shi Zhu <Go to the following URL for my email>
-" URL:		http://vim.sourceforge.net/scripts/script.php?script_id=760
-" Last Change:	5 Feb 2010
-" Version:	3.4
+" Maintainer:  Steven Oliver <oliver.steven@gmail.com>
+" Previous Maintainer:	Pan, Shi Zhu
+" URL:  https://github.com/steveno/peaksea/
 "
 "	Comments and e-mails are welcomed, thanks.
 "
@@ -10,14 +9,7 @@
 "	the original ps_color. Lite version means there's no custom settings
 "	and fancy features such as integration with reloaded.vim 
 "
-"	The full version of ps_color.vim will be maintained until Vim 8.
-"	By then there will be only the lite version: peaksea.vim
-"
 " Note: Please set the background option in your .vimrc and/or .gvimrc
-"
-"	It is much better *not* to set 'background' option inside
-"	a colorscheme file.  because ":set background" improperly
-"	may cause colorscheme be sourced twice
 "
 " Color Scheme Overview: 
 "	:ru syntax/hitest.vim
