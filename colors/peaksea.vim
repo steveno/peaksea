@@ -46,12 +46,7 @@ if &background=='light'
   hi Normal		guifg=#000000	guibg=#e0e0e0	gui=NONE
   hi Search		guifg=NONE	guibg=#f8f8f8	gui=NONE
   hi Visual		guifg=NONE	guibg=#a6caf0	gui=NONE
-  hi Cursor		guifg=#f0f0f0	guibg=#008000	gui=NONE
-  " The idea of CursorIM is pretty good, however, the feature is still buggy
-  " in the current version (Vim 7.0).
-  " The following line will be kept commented until the bug fixed.
-  "
-  " hi CursorIM		guifg=#f0f0f0	guibg=#800080
+  hi Cursor		guifg=#f0f0f0	guibg=#008000	gui=NONE  
   hi Special		guifg=#907000	guibg=NONE	gui=NONE
   hi Comment		guifg=#606000	guibg=NONE	gui=NONE
   hi Number		guifg=#907000	guibg=NONE	gui=NONE
@@ -132,13 +127,13 @@ if &background=='light'
   hi StatusLine		gui=bold
   hi StatusLineNC	gui=bold
   hi VertSplit		gui=bold
-  hi Visual		gui=bold
+  hi Visual		    gui=bold
 
   " Enable the bold property
   hi Question		gui=bold
   hi DiffText		gui=bold
-  hi Statement		gui=bold
-  hi Type		gui=bold
+  hi Statement	gui=bold
+  hi Type		    gui=bold
   hi MoreMsg		gui=bold
   hi ModeMsg		gui=bold
   hi NonText		gui=bold
@@ -149,10 +144,7 @@ if &background=='light'
   " gui define for background=light end here
 
   " generally, a dumb terminal is dark, we assume the light terminal has 256
-  " color support.
-  if &t_Co==8 || &t_Co==16
-    set t_Co=256
-  endif
+  " color support.  
   if &t_Co==256
     " 256color light terminal support here
 
@@ -255,8 +247,7 @@ if &background=='light'
     "hi lCursor		ctermfg=bg	ctermbg=fg	cterm=NONE
   endif " t_Co==256
   " }}}2
-elseif &background=='dark' 
-  " for background=dark {{{2
+elseif &background=='dark'  
   " DARK COLOR DEFINE START
 
   hi Normal		guifg=#d0d0d0	guibg=#202020	gui=NONE
@@ -273,8 +264,7 @@ elseif &background=='dark'
   hi Search		guifg=NONE	guibg=#800000	gui=NONE
   hi Visual		guifg=#000000	guibg=#a6caf0	gui=NONE
   hi Cursor		guifg=#000000	guibg=#00f000	gui=NONE
-  " NOTE THIS IS IN THE COOL SECTION
-  " hi CursorIM		guifg=#000000	guibg=#f000f0	gui=NONE
+  " NOTE THIS IS IN THE COOL SECTION  
   hi StatusLine		guifg=#000000	guibg=#a6caf0	gui=NONE
   hi LineNr		guifg=#b0b0b0	guibg=#333435	gui=NONE
   hi Question		guifg=#000000	guibg=#d0d090	gui=NONE
@@ -341,155 +331,7 @@ elseif &background=='dark'
   endif
 
   " gui define for background=dark end here
-
-  if &t_Co==8 || &t_Co==16
-    " for 8-color and 16-color term
-    hi Normal		ctermfg=LightGrey   ctermbg=Black
-    hi Special		ctermfg=Yellow	    ctermbg=bg
-    hi Comment		ctermfg=DarkYellow  ctermbg=bg
-    hi Constant		ctermfg=Blue	    ctermbg=bg
-    hi Number		ctermfg=Yellow	    ctermbg=bg
-    hi LineNr		ctermfg=DarkGrey    ctermbg=bg
-    hi PreProc		ctermfg=Green	    ctermbg=bg
-    hi Statement	ctermfg=Cyan	    ctermbg=bg
-    hi Type		ctermfg=Cyan	    ctermbg=bg
-    hi Error		ctermfg=Red	    ctermbg=bg
-    hi Identifier	ctermfg=Magenta     ctermbg=bg
-    hi SpecialKey	ctermfg=Cyan	    ctermbg=bg
-    hi NonText		ctermfg=Blue	    ctermbg=bg
-    hi Directory	ctermfg=Blue	    ctermbg=bg
-    hi MoreMsg		ctermfg=Green	    ctermbg=bg
-    hi Title		ctermfg=Magenta     ctermbg=bg
-    hi WarningMsg	ctermfg=Red	    ctermbg=bg
-    hi DiffDelete	ctermfg=Blue	    ctermbg=bg
-
-    hi Search		ctermfg=NONE	    ctermbg=DarkRed
-    hi Visual		ctermfg=Black	    ctermbg=DarkCyan
-    hi Cursor		ctermfg=Black	    ctermbg=Green
-    hi StatusLine	ctermfg=Black	    ctermbg=DarkCyan
-    hi Question		ctermfg=Black	    ctermbg=DarkYellow
-    hi Todo		ctermfg=DarkRed     ctermbg=DarkYellow
-    hi Folded		ctermfg=White	    ctermbg=DarkGreen
-    hi ModeMsg		ctermfg=Grey	    ctermbg=DarkBlue
-    hi VisualNOS	ctermfg=Grey	    ctermbg=DarkBlue
-    hi ErrorMsg		ctermfg=DarkYellow  ctermbg=DarkRed
-    hi WildMenu		ctermfg=Black	    ctermbg=DarkYellow
-    hi FoldColumn	ctermfg=White	    ctermbg=DarkGreen
-    hi SignColumn	ctermfg=White	    ctermbg=DarkGreen
-    hi DiffText		ctermfg=Black	    ctermbg=DarkYellow
-
-    if v:version >= 700
-      if has('spell')
-        hi SpellBad	ctermfg=NONE	ctermbg=DarkRed
-        hi SpellCap	ctermfg=NONE	ctermbg=DarkBlue
-        hi SpellRare	ctermfg=NONE	ctermbg=DarkMagenta
-        hi SpellLocal	ctermfg=NONE	ctermbg=DarkGreen
-      endif
-      hi Pmenu		ctermfg=fg	ctermbg=DarkMagenta
-      hi PmenuSel	ctermfg=Black	ctermbg=fg
-      hi PmenuSbar	ctermfg=fg	ctermbg=DarkBlue
-      hi PmenuThumb	ctermfg=fg	ctermbg=DarkGreen
-      hi TabLine	ctermfg=fg	ctermbg=DarkGreen	cterm=underline
-      hi TabLineFill	ctermfg=fg	ctermbg=DarkGreen	cterm=underline
-      hi CursorColumn	ctermfg=NONE	ctermbg=DarkRed
-
-      hi TabLineSel	ctermfg=fg	ctermbg=bg
-      hi CursorLine	ctermfg=NONE	ctermbg=bg		cterm=underline
-
-      hi MatchParen	ctermfg=NONE	ctermbg=DarkMagenta
-    endif
-    if &t_Co==8
-      " 8 colour terminal support, this assumes 16 colour is available through
-      " setting the 'bold' attribute, will get bright foreground colour.
-      " However, the bright background color is not available for 8-color terms.
-      "
-      " You can manually set t_Co=16 in your .vimrc to see if your terminal
-      " supports 16 colours, 
-      hi DiffText	cterm=none  
-      hi Visual		cterm=none  
-      hi Cursor		cterm=none  
-      hi Comment	cterm=none  
-      hi Todo		cterm=none  
-      hi StatusLine	cterm=none  
-      hi Question	cterm=none  
-      hi DiffChange	cterm=none  
-      hi ModeMsg	cterm=none  
-      hi VisualNOS	cterm=none  
-      hi ErrorMsg	cterm=none  
-      hi WildMenu	cterm=none  
-      hi DiffAdd	cterm=none  
-      hi Folded		cterm=none  
-      hi DiffDelete	cterm=none  
-      hi Normal		cterm=none  
-      hi PmenuThumb	cterm=none 
-      hi Search		cterm=bold  
-      hi Special	cterm=bold  
-      hi Constant	cterm=bold  
-      hi Number		cterm=bold  
-      hi LineNr		cterm=bold  
-      hi PreProc	cterm=bold  
-      hi Statement	cterm=bold  
-      hi Type		cterm=bold  
-      hi Error		cterm=bold  
-      hi Identifier	cterm=bold  
-      hi SpecialKey	cterm=bold  
-      hi NonText	cterm=bold  
-      hi MoreMsg	cterm=bold  
-      hi Title		cterm=bold  
-      hi WarningMsg	cterm=bold  
-      hi FoldColumn	cterm=bold  
-      hi SignColumn	cterm=bold  
-      hi Directory	cterm=bold  
-      hi DiffDelete	cterm=bold 
-    else
-      " Background > 7 is only available with 16 or more colors
-
-      hi WarningMsg	cterm=none  
-      hi Search		cterm=none  
-      hi Visual		cterm=none  
-      hi Cursor		cterm=none  
-      hi Special	cterm=none  
-      hi Comment	cterm=none  
-      hi Constant	cterm=none  
-      hi Number		cterm=none  
-      hi LineNr		cterm=none  
-      hi PreProc	cterm=none  
-      hi Todo		cterm=none  
-      hi Error		cterm=none  
-      hi Identifier	cterm=none  
-      hi Folded		cterm=none  
-      hi SpecialKey	cterm=none  
-      hi Directory	cterm=none  
-      hi ErrorMsg	cterm=none  
-      hi Normal		cterm=none  
-      hi PmenuThumb	cterm=none 
-      hi WildMenu	cterm=none  
-      hi FoldColumn	cterm=none  
-      hi SignColumn	cterm=none  
-      hi DiffAdd	cterm=none  
-      hi DiffChange	cterm=none  
-      hi Question	cterm=none  
-      hi StatusLine	cterm=none  
-      hi DiffText	cterm=none 
-      hi IncSearch	cterm=reverse  
-      hi StatusLineNC	cterm=reverse  
-      hi VertSplit	cterm=reverse 
-
-      " Well, well, bold font with color 0-7 is not possible.
-      " So, the Question, StatusLine, DiffText cannot act as expected.
-
-      hi Statement	cterm=none  
-      hi Type		cterm=none  
-      hi MoreMsg	cterm=none  
-      hi ModeMsg	cterm=none  
-      hi NonText	cterm=none  
-      hi Title		cterm=none  
-      hi VisualNOS	cterm=none  
-      hi DiffDelete	cterm=none  
-      hi TabLineSel	cterm=none 
-
-    endif
-  elseif &t_Co==256
+  if &t_Co==256
     " 256color dark terminal support here
     hi Normal		ctermfg=252	ctermbg=234	cterm=NONE
     " Comment/Uncomment the following line to disable/enable transparency
@@ -567,7 +409,6 @@ elseif &background=='dark'
       hi Underlined	cterm=underline  
       hi CursorLine	cterm=underline 
     endif
-
   endif " t_Co
 
   " }}}2
@@ -598,4 +439,3 @@ hi link		MyTagListTagScope	Constant
 " COLOR LINKS DEFINE END
 
 " vim:et:nosta:sw=2:ts=8:
-" vim600:fdm=marker:fdl=1:
