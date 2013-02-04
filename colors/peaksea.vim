@@ -51,7 +51,7 @@ if &background=='light'
   hi Type		guifg=#0850a0	guibg=NONE	gui=NONE
   hi Todo		guifg=#800000	guibg=#e0e090	gui=NONE
   " NOTE THIS IS IN THE WARM SECTION
-  hi Error		guifg=#c03000	guibg=NONE	gui=NONE
+  hi Error		guifg=#c03000	guibg=NONE	gui=undercurl
   hi Identifier		guifg=#a030a0	guibg=NONE	gui=NONE
   hi ModeMsg		guifg=fg	guibg=#b0b0e0	gui=NONE
   hi VisualNOS		guifg=fg	guibg=#b0b0e0	gui=NONE
@@ -251,7 +251,7 @@ elseif &background=='dark'
   hi PreProc		guifg=#60f080	guibg=NONE	gui=NONE
   hi Type		guifg=#b0d0f0	guibg=NONE	gui=NONE
   hi Special		guifg=#e0c060	guibg=NONE	gui=NONE
-  hi Error		guifg=#f08060	guibg=NONE	gui=NONE
+  hi Error		guifg=#f08060	guibg=NONE	gui=undercurl
   hi Todo		guifg=#800000	guibg=#d0d090	gui=NONE
   hi Search		guifg=NONE	guibg=#800000	gui=NONE
   hi Visual		guifg=#000000	guibg=#a6caf0	gui=NONE
@@ -265,7 +265,7 @@ elseif &background=='dark'
   hi SpecialKey		guifg=#b0d0f0	guibg=NONE	gui=NONE
   hi NonText		guifg=#6080f0	guibg=#101010	gui=NONE
   hi Directory		guifg=#80c0e0	guibg=NONE	gui=NONE
-  hi ErrorMsg		guifg=#d0d090	guibg=#800000	gui=NONE
+  hi errorMsg		guifg=#d0d090	guibg=#800000	gui=NONE
   hi MoreMsg		guifg=#c0e080	guibg=NONE	gui=NONE
   hi Title		guifg=#f0c0f0	guibg=NONE	gui=NONE
   hi WarningMsg		guifg=#f08060	guibg=NONE	gui=NONE
