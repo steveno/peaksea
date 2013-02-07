@@ -265,7 +265,7 @@ elseif &background=='dark'
   hi SpecialKey		guifg=#b0d0f0	guibg=NONE	gui=NONE
   hi NonText		guifg=#6080f0	guibg=#101010	gui=NONE
   hi Directory		guifg=#80c0e0	guibg=NONE	gui=NONE
-  hi errorMsg		guifg=#d0d090	guibg=#800000	gui=NONE
+  hi ErrorMsg		guifg=#d0d090	guibg=#800000	gui=NONE
   hi MoreMsg		guifg=#c0e080	guibg=NONE	gui=NONE
   hi Title		guifg=#f0c0f0	guibg=NONE	gui=NONE
   hi WarningMsg		guifg=#f08060	guibg=NONE	gui=NONE
