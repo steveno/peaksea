@@ -3,7 +3,7 @@ The original version of this color scheme can still be found at:
 
 The peak sea color (peaksea.vim) is the new version of the well-known colorscheme ps_color.
 
-Now the color contains light-background scheme and ah dark-background scheme supporting both gui and 256 terms.
+Now the color contains light-background scheme and a dark-background scheme supporting both gui and 256 terms.
 
 You can fire any issues at:
   https://github.com/steveno/peaksea/issues
