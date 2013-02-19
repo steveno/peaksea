@@ -413,7 +413,7 @@ endif
 hi link		String		Constant
 " Character must be different from strings because in many languages
 " (especially C, C++) a 'char' variable is scalar while 'string' is pointer,
-" mistaken a 'char' for a 'string' will cause disaster!
+" mistaking a 'char' for a 'string' will cause disaster!
 hi link		Character	Number
 hi link		SpecialChar	LineNr
 hi link		Tag		Identifier
