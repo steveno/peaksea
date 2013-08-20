@@ -1,4 +1,4 @@
-" Vim color file --- psc (peak sea color) "Lite version"
+" Vim color file
 " Maintainer:  Steven Oliver <oliver.steven@gmail.com>
 " Previous Maintainer:	Pan, Shi Zhu
 " URL:  https://github.com/steveno/peaksea/
