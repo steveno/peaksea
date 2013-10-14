@@ -14,8 +14,8 @@ endif
 let g:colors_name = expand("<sfile>:t:r")
 
 "{{{1 Light Background
-if &background=='light' 
-  " LIGHT COLOR DEFINE START
+if &background=='light'
+	" LIGHT COLOR DEFINE START
 	hi Normal		guifg=#000000	guibg=#e0e0e0	gui=NONE
 	hi Search		guifg=NONE	guibg=#f8f8f8	gui=NONE
 	hi Visual		guifg=NONE	guibg=#a6caf0	gui=NONE
@@ -59,10 +59,10 @@ if &background=='light'
 	hi Ignore		guifg=bg	guibg=NONE
 	" NOTE THIS IS IN THE WARM SECTION
 	if has('spell')
-	hi SpellBad		guifg=NONE	guibg=NONE	guisp=#c03000
-	hi SpellCap		guifg=NONE	guibg=NONE	guisp=#2060a8
-	hi SpellRare		guifg=NONE	guibg=NONE	guisp=#a030a0
-	hi SpellLocal		guifg=NONE	guibg=NONE	guisp=#007068
+		hi SpellBad		guifg=NONE	guibg=NONE	guisp=#c03000
+		hi SpellCap		guifg=NONE	guibg=NONE	guisp=#2060a8
+		hi SpellRare		guifg=NONE	guibg=NONE	guisp=#a030a0
+		hi SpellLocal		guifg=NONE	guibg=NONE	guisp=#007068
 	endif
 	hi Pmenu		guifg=fg	guibg=#e0b0e0
 	hi PmenuSel		guifg=#f0f0f0	guibg=#806060	gui=NONE
@@ -78,10 +78,10 @@ if &background=='light'
 	" LIGHT COLOR DEFINE END
 	hi Ignore		gui=NONE
 	if has('spell')
-	hi SpellBad		gui=undercurl
-	hi SpellCap		gui=undercurl
-	hi SpellRare		gui=undercurl
-	hi SpellLocal		gui=undercurl
+		hi SpellBad		gui=undercurl
+		hi SpellCap		gui=undercurl
+		hi SpellRare		gui=undercurl
+		hi SpellLocal		gui=undercurl
 	endif
 	hi TabLine		gui=underline
 	hi TabLineFill		gui=underline
@@ -111,104 +111,102 @@ if &background=='light'
 	" generally, a dumb terminal is dark, we assume the light terminal has 256
 	" color support.  
 	if &t_Co==256
-	" 256color light terminal support here
-	
-	hi Normal		ctermfg=16	ctermbg=254	cterm=NONE
-	" Comment/Uncomment the following line to disable/enable transparency
-	"hi Normal		ctermfg=16	ctermbg=NONE	cterm=NONE
-	hi Search		ctermfg=NONE	ctermbg=231	cterm=NONE
-	hi Visual		ctermfg=NONE	ctermbg=153	cterm=NONE
-	hi Cursor		ctermfg=255	ctermbg=28	cterm=NONE
-	" hi CursorIM	ctermfg=255	ctermbg=90
-	hi Special		ctermfg=94	ctermbg=NONE	cterm=NONE
-	hi Comment		ctermfg=58	ctermbg=NONE	cterm=NONE
-	hi Number		ctermfg=94	ctermbg=NONE	cterm=NONE
-	hi Constant		ctermfg=23	ctermbg=NONE	cterm=NONE
-	hi StatusLine		ctermfg=fg	ctermbg=153	cterm=NONE
-	hi LineNr		ctermfg=242	ctermbg=NONE	cterm=NONE
-	hi Question		ctermfg=fg	ctermbg=186	cterm=NONE
-	hi PreProc		ctermfg=29	ctermbg=NONE	cterm=NONE
-	hi Statement		ctermfg=25	ctermbg=NONE	cterm=NONE
-	hi Type			ctermfg=25	ctermbg=NONE	cterm=NONE
-	hi Todo			ctermfg=88	ctermbg=186	cterm=NONE
-	" NOTE THIS IS IN THE WARM SECTION
-	hi Error		ctermfg=130	ctermbg=NONE	cterm=NONE
-	hi Identifier		ctermfg=133	ctermbg=NONE	cterm=NONE
-	hi ModeMsg		ctermfg=fg	ctermbg=146	cterm=NONE
-	hi VisualNOS		ctermfg=fg	ctermbg=146	cterm=NONE
-	hi SpecialKey		ctermfg=25	ctermbg=NONE	cterm=NONE
-	hi NonText		ctermfg=18	ctermbg=252	cterm=NONE
-	" Comment/Uncomment the following line to disable/enable transparency
-	"hi NonText		ctermfg=18	ctermbg=NONE	cterm=NONE
-	hi Directory		ctermfg=133	ctermbg=NONE	cterm=NONE
-	hi ErrorMsg		ctermfg=fg	ctermbg=216	cterm=NONE
-	hi MoreMsg		ctermfg=64	ctermbg=NONE	cterm=NONE
-	hi Title		ctermfg=133	ctermbg=NONE	cterm=NONE
-	hi WarningMsg		ctermfg=124	ctermbg=NONE	cterm=NONE
-	hi WildMenu		ctermfg=fg	ctermbg=186	cterm=NONE
-	hi Folded		ctermfg=NONE	ctermbg=151	cterm=NONE
-	hi FoldColumn		ctermfg=fg	ctermbg=114	cterm=NONE
-	hi DiffAdd		ctermfg=NONE	ctermbg=146	cterm=NONE
-	hi DiffChange		ctermfg=NONE	ctermbg=182	cterm=NONE
-	hi DiffDelete		ctermfg=18	ctermbg=252	cterm=NONE
-	hi DiffText		ctermfg=NONE	ctermbg=150	cterm=NONE
-	hi SignColumn		ctermfg=fg	ctermbg=114	cterm=NONE
-	
-	hi IncSearch		ctermfg=255	ctermbg=95	cterm=NONE
-	hi StatusLineNC		ctermfg=fg	ctermbg=250	cterm=NONE
-	hi VertSplit		ctermfg=fg	ctermbg=250	cterm=NONE
-	hi Underlined		ctermfg=62	ctermbg=NONE	cterm=underline
-	hi Ignore		ctermfg=bg	ctermbg=NONE
-	" NOTE THIS IS IN THE WARM SECTION
-	if has('spell')
-		if 0
-			" ctermsp is not supported in Vim7, we ignore it.
-			hi SpellBad	cterm=undercurl	ctermbg=NONE	ctermfg=130
-			hi SpellCap	cterm=undercurl	ctermbg=NONE	ctermfg=25
-			hi SpellRare	cterm=undercurl	ctermbg=NONE	ctermfg=133
-			hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=23
-		else
-			hi SpellBad	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
-			hi SpellCap	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
-			hi SpellRare	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
-			hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+		" 256color light terminal support here
+		hi Normal		ctermfg=16	ctermbg=254	cterm=NONE
+		" Comment/Uncomment the following line to disable/enable transparency
+		"hi Normal		ctermfg=16	ctermbg=NONE	cterm=NONE
+		hi Search		ctermfg=NONE	ctermbg=231	cterm=NONE
+		hi Visual		ctermfg=NONE	ctermbg=153	cterm=NONE
+		hi Cursor		ctermfg=255	ctermbg=28	cterm=NONE
+		" hi CursorIM	ctermfg=255	ctermbg=90
+		hi Special		ctermfg=94	ctermbg=NONE	cterm=NONE
+		hi Comment		ctermfg=58	ctermbg=NONE	cterm=NONE
+		hi Number		ctermfg=94	ctermbg=NONE	cterm=NONE
+		hi Constant		ctermfg=23	ctermbg=NONE	cterm=NONE
+		hi StatusLine		ctermfg=fg	ctermbg=153	cterm=NONE
+		hi LineNr		ctermfg=242	ctermbg=NONE	cterm=NONE
+		hi Question		ctermfg=fg	ctermbg=186	cterm=NONE
+		hi PreProc		ctermfg=29	ctermbg=NONE	cterm=NONE
+		hi Statement		ctermfg=25	ctermbg=NONE	cterm=NONE
+		hi Type			ctermfg=25	ctermbg=NONE	cterm=NONE
+		hi Todo			ctermfg=88	ctermbg=186	cterm=NONE
+		" NOTE THIS IS IN THE WARM SECTION
+		hi Error		ctermfg=130	ctermbg=NONE	cterm=NONE
+		hi Identifier		ctermfg=133	ctermbg=NONE	cterm=NONE
+		hi ModeMsg		ctermfg=fg	ctermbg=146	cterm=NONE
+		hi VisualNOS		ctermfg=fg	ctermbg=146	cterm=NONE
+		hi SpecialKey		ctermfg=25	ctermbg=NONE	cterm=NONE
+		hi NonText		ctermfg=18	ctermbg=252	cterm=NONE
+		" Comment/Uncomment the following line to disable/enable transparency
+		"hi NonText		ctermfg=18	ctermbg=NONE	cterm=NONE
+		hi Directory		ctermfg=133	ctermbg=NONE	cterm=NONE
+		hi ErrorMsg		ctermfg=fg	ctermbg=216	cterm=NONE
+		hi MoreMsg		ctermfg=64	ctermbg=NONE	cterm=NONE
+		hi Title		ctermfg=133	ctermbg=NONE	cterm=NONE
+		hi WarningMsg		ctermfg=124	ctermbg=NONE	cterm=NONE
+		hi WildMenu		ctermfg=fg	ctermbg=186	cterm=NONE
+		hi Folded		ctermfg=NONE	ctermbg=151	cterm=NONE
+		hi FoldColumn		ctermfg=fg	ctermbg=114	cterm=NONE
+		hi DiffAdd		ctermfg=NONE	ctermbg=146	cterm=NONE
+		hi DiffChange		ctermfg=NONE	ctermbg=182	cterm=NONE
+		hi DiffDelete		ctermfg=18	ctermbg=252	cterm=NONE
+		hi DiffText		ctermfg=NONE	ctermbg=150	cterm=NONE
+		hi SignColumn		ctermfg=fg	ctermbg=114	cterm=NONE
+
+		hi IncSearch		ctermfg=255	ctermbg=95	cterm=NONE
+		hi StatusLineNC		ctermfg=fg	ctermbg=250	cterm=NONE
+		hi VertSplit		ctermfg=fg	ctermbg=250	cterm=NONE
+		hi Underlined		ctermfg=62	ctermbg=NONE	cterm=underline
+		hi Ignore		ctermfg=bg	ctermbg=NONE
+		" NOTE THIS IS IN THE WARM SECTION
+		if has('spell')
+			if 0
+				hi SpellBad	cterm=undercurl	ctermbg=NONE	ctermfg=130
+				hi SpellCap	cterm=undercurl	ctermbg=NONE	ctermfg=25
+				hi SpellRare	cterm=undercurl	ctermbg=NONE	ctermfg=133
+				hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=23
+			else
+				hi SpellBad	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+				hi SpellCap	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+				hi SpellRare	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+				hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
+			endif
 		endif
-	endif
-	hi Pmenu	ctermfg=fg	ctermbg=182
-	hi PmenuSel	ctermfg=255	ctermbg=95	cterm=NONE
-	hi PmenuSbar	ctermfg=fg	ctermbg=250	cterm=NONE
-	hi PmenuThumb	ctermfg=fg	ctermbg=150	cterm=NONE
-	hi TabLine	ctermfg=fg	ctermbg=250	cterm=NONE
-	hi TabLineFill	ctermfg=fg	ctermbg=250	cterm=NONE
-	hi TabLineSel	ctermfg=fg	ctermbg=NONE	cterm=NONE
-	hi CursorColumn	ctermfg=NONE	ctermbg=216
-	hi CursorLine	ctermfg=NONE	ctermbg=NONE	cterm=underline
-	hi MatchParen	ctermfg=NONE	ctermbg=150
+		hi Pmenu	ctermfg=fg	ctermbg=182
+		hi PmenuSel	ctermfg=255	ctermbg=95	cterm=NONE
+		hi PmenuSbar	ctermfg=fg	ctermbg=250	cterm=NONE
+		hi PmenuThumb	ctermfg=fg	ctermbg=150	cterm=NONE
+		hi TabLine	ctermfg=fg	ctermbg=250	cterm=NONE
+		hi TabLineFill	ctermfg=fg	ctermbg=250	cterm=NONE
+		hi TabLineSel	ctermfg=fg	ctermbg=NONE	cterm=NONE
+		hi CursorColumn	ctermfg=NONE	ctermbg=216
+		hi CursorLine	ctermfg=NONE	ctermbg=NONE	cterm=underline
+		hi MatchParen	ctermfg=NONE	ctermbg=150
+
+		hi TabLine	cterm=underline
+		hi TabLineFill	cterm=underline
+		hi CursorLine	cterm=underline
+
+		" For reversed stuffs, clear the reversed prop and set the bold prop again
+		hi IncSearch	cterm=bold
+		hi StatusLine	cterm=bold
+		hi StatusLineNC	cterm=bold
+		hi VertSplit	cterm=bold
+		hi Visual	cterm=bold
 	
-	hi TabLine	cterm=underline
-	hi TabLineFill	cterm=underline
-	hi CursorLine	cterm=underline
-	
-	" For reversed stuffs, clear the reversed prop and set the bold prop again
-	hi IncSearch	cterm=bold
-	hi StatusLine	cterm=bold
-	hi StatusLineNC	cterm=bold
-	hi VertSplit	cterm=bold
-	hi Visual	cterm=bold
-	
-	hi NonText	cterm=bold
-	hi Question	cterm=bold
-	hi Title	cterm=bold
-	hi DiffDelete	cterm=bold
-	hi DiffText	cterm=bold
-	hi Statement	cterm=bold
-	hi Type		cterm=bold
-	hi MoreMsg	cterm=bold
-	hi ModeMsg	cterm=bold
-	hi TabLineSel	cterm=bold
-	
-	"hi lCursor		ctermfg=bg	ctermbg=fg	cterm=NONE
-	endif " t_Co==256
+		hi NonText	cterm=bold
+		hi Question	cterm=bold
+		hi Title	cterm=bold
+		hi DiffDelete	cterm=bold
+		hi DiffText	cterm=bold
+		hi Statement	cterm=bold
+		hi Type		cterm=bold
+		hi MoreMsg	cterm=bold
+		hi ModeMsg	cterm=bold
+		hi TabLineSel	cterm=bold
+
+		"hi lCursor		ctermfg=bg	ctermbg=fg	cterm=NONE
+	endif " t_Co
 "{{{1 Dark Background
 elseif &background=='dark'  
 	hi Normal		guifg=#d0d0d0	guibg=#202020	gui=NONE
@@ -358,7 +356,7 @@ elseif &background=='dark'
 		hi TabLineFill		cterm=underline
 		hi Underlined		cterm=underline
 		hi CursorLine		cterm=underline
-	endif " t_Co	
+	endif "t_Co
 endif
 "}}}1
 
@@ -371,13 +369,12 @@ hi link		Character	Number
 hi link		SpecialChar	LineNr
 hi link		Tag		Identifier
 hi link		cCppOut		LineNr
-" The following are not standard hi links, 
-" these are used by DrChip
+" The following are not standard hi links, these are used by DrChip
 hi link		Warning		MoreMsg
 hi link		Notice		Constant
-" these are used by Calendar
+" These are used by Calendar
 hi link		CalToday	PreProc
-" these are used by TagList
+" These are used by TagList
 hi link		MyTagListTagName	IncSearch
 hi link		MyTagListTagScope	Constant
 "}}}1
